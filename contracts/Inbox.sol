@@ -6,7 +6,8 @@ contract Inbox{
     int32 public lazar = 0;    
     address private owner;
     string public message;
-    
+    string public a = "asd";
+
     constructor(string memory initMessage) public {
         message = initMessage;
         owner = msg.sender;
@@ -16,8 +17,6 @@ contract Inbox{
      require(msg.sender == owner);
         _;
     }
-
-
     function increment() public onlyOwner  {
       lazar += 1;
     }
